@@ -1,0 +1,45 @@
+<h1> new </h1>
+<% if @study.errors.messages.present? %>
+    <% @study.errors.full_messages do |message| %>
+        <ul>
+            <li><%= message %></li>
+        </ul>
+    <% end %>
+<% end %>
+
+<%= form_with(model: @study, local: true) do |f| %>
+    <table>
+        <tr>
+            <th>Name </th>
+            <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+            <th>Age Limit </th>
+            <td><%= f.number_field :age_limit %></td>
+        </tr>
+        <tr>
+            <th>Drug </th>
+            <td><%= f.text_field :drug %></td>
+        </tr>
+        <tr>
+            <th>Phase </th>
+            <td><%= f.number_field :phase %></td>
+        </tr>
+        <tr>
+            <th>Symptoms </th>
+            <td><%= f.text_field :symptoms %></td>
+        </tr>
+        <tr>
+            <th>Study Group </th>
+            <td><%= f.select(:study_group_id,@study_s.map { |p| p.id}) %></td>
+        </tr>
+        <tr>
+            <th>Image </th>
+            <td><%= f.file_field :my_image %></td>
+        </tr>
+        <tr>
+            <%= f.submit("Create Study") %>
+        </tr>
+        
+    </table>
+<% end %>

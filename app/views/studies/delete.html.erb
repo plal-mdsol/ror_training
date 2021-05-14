@@ -1,0 +1,19 @@
+
+
+<%= link_to("<< Back to List", studies_path, :class => 'back-link') %>
+
+<div class="subjects delete">
+  <h2>Delete Study</h2>
+
+  <%= form_for(@study, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this subject?</p>
+
+    <p class="reference-name"><%= f.object.name %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Subject") %>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,19 @@
+
+
+%tr
+  %td
+    = studie.name
+  %td
+    = studie.age_limit
+  %td
+    = studie.drug
+  %td
+    = studie.phase
+  %td
+    = studie.symptoms
+  - if studie.my_image.attached?
+    %td
+      = image_tag studie.my_image.variant(resize_to_limit: [500, 500])
+  %td.actions
+    = link_to("Delete", delete_study_path(studie), :class => 'action delete')
+    

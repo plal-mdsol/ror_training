@@ -26,8 +26,14 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 gem 'rexml', '~> 3.2.4'
 gem 'rufus-scheduler'
+gem 'image_processing'
+gem "haml-rails", "~> 2.0"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'active_model_serializers'
+gem 'sidekiq'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'

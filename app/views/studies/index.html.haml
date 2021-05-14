@@ -1,0 +1,16 @@
+
+
+%h1 Index action of Studies controller
+= link_to 'Add Study', new_study_path
+%table
+  %tr
+    %th Name
+    %th Age Limit
+    %th Drug
+    %th Phase
+    %th Symptoms
+    %th Image
+    %th Action
+  - cache @studies do
+    - @studies.each do | studie|
+      = render :partial => 'study', :locals => {:studie => studie}

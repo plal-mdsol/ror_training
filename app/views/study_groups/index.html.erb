@@ -1,0 +1,9 @@
+<%=link_to 'Add studyGroup', '/study_groups/new' %>
+<table>
+    <tr>
+        <th> Name </th>
+    </tr>
+    <% @studyGroups.each do | studyGroup| %>
+        <%= render :partial => 'study_group', :locals => {:studyGroup => studyGroup} %>
+    <% end %>
+</table>

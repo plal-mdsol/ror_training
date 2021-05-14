@@ -1,0 +1,26 @@
+<body>
+
+
+    <div class="header">
+        <h1>Assignment</h1>
+    </div>
+
+
+
+
+    <div class ="list">
+        <a><%= link_to("Study",studies_path)%></a>
+        <a><%= link_to("Study Group",study_groups_path)%></a>
+    </div>
+
+    <div id="main">
+        <% if !flash[:notice].blank? %>
+            <div class="notice">
+                <%= flash[:notice] %>
+            </div>
+        <% end %>
+        <%= yield %>
+        
+    </div>
+
+</body>

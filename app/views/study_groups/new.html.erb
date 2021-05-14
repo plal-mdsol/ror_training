@@ -1,0 +1,14 @@
+<h1> new </h1>
+
+<%= form_with(model: @studyGroup, local: true) do |f| %>
+    <table>
+        <tr>
+            <th>Name </th>
+            <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+            <%= f.submit("Create studyGroup") %>
+        </tr>
+        
+    </table>
+<% end %>
